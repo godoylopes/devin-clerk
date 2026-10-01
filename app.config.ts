@@ -4,22 +4,34 @@ export type Feature = {
 };
 
 export const appConfig = {
-  name: "Your App",
-  description: "Describe your app in one sentence. Devin will fill this in.",
-  emoji: "🚀",
-  accent: "#7c3aed",
+  name: "flsfl",
+  description: "s,f,sf",
+  emoji: "🧩",
+  accent: "#0d9488",
   upcomingFeatures: [
     {
-      title: "Your first feature",
-      description: "What people will be able to do once it's built.",
+      title: "Personal profile",
+      description: "Set a display name and a short bio for your account.",
     },
     {
-      title: "Your second feature",
-      description: "Devin will write this list based on your app idea.",
+      title: "Quick notes",
+      description: "Create and save short notes from your dashboard.",
     },
     {
-      title: "Your third feature",
-      description: "Each one is a good next prompt for Devin.",
+      title: "Note tags",
+      description: "Tag your notes and filter the list by tag.",
+    },
+    {
+      title: "Share by link",
+      description: "Generate a public read-only link to any note.",
+    },
+    {
+      title: "Weekly digest",
+      description: "Get a weekly email summarizing your activity.",
     },
   ] satisfies Feature[],
+};
+
+export const clerkAppearance = {
+  variables: { colorPrimary: appConfig.accent },
 };
