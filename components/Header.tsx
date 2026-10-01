@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { appConfig } from "@/app.config";
+import {
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
+import { appConfig, clerkAppearance } from "@/app.config";
 
 export function Header() {
   return (
@@ -13,7 +19,21 @@ export function Header() {
           <Link href="/dashboard" className="hover:text-accent">
             Dashboard
           </Link>
-          {/* AUTH CONTROLS GO HERE */}
+          <Show when="signed-out">
+            <SignInButton>
+              <button className="font-medium text-accent hover:opacity-80">
+                Sign in
+              </button>
+            </SignInButton>
+            <SignUpButton>
+              <button className="rounded-full bg-accent px-4 py-2 font-medium text-white shadow-sm transition hover:opacity-90">
+                Sign up
+              </button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton appearance={clerkAppearance} />
+          </Show>
         </nav>
       </div>
     </header>

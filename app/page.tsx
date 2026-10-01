@@ -16,8 +16,7 @@ export default function Home() {
         Get early access →
       </Link>
       <p className="text-sm text-black/50">
-        This page is public. The early-access page should be for signed-in users
-        only.
+        Sign up to join the early-access list and see what&apos;s coming next.
       </p>
     </section>
   );
